@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <title>Front End Test - Greenthumb</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./index.css" />
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="index.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <div class="header_background_portrait">
+      <img src="images/hero/mobile/mobile-plantperson.png" alt="plantperson" id="plantperson">
+      <img src="images/hero/mobile/mobile-leaves.png" alt="leaves" id="leaves">
+    </div>
+    <div class="header_background_landscape">
+      <img src="images/hero/desktop/left-leaves.png" alt="leaves">
+      <img src="images/hero/desktop/plantperson.png" alt="plantperson">
+      <img src="images/hero/desktop/right-leaves.png" alt="leaves">
+    </div>
+    <div class="header_title">
+      <img src="images/icons/logo-white.svg" alt="Greenthumb" id="logo" />
+      <h1 id="title">Find your next green friend</h1>
+      <a href="#filter" class="arrow-down">
+        <img src="images/icons/arrow-down.svg" alt="arrow-down">
+      </a>
+    </div>
+  </header>
+  <section id="filter">
+    <div class="filter_option">
+      <img src="images/illustrations/sun.png" alt="sun" />
+      <label><b>1. </b> Set the amount of <b>sunlight</b> your plant will get.</label>
+      <div class="dropdown_component">
+        <button id="sun" class="dropdown">
+          <span class="dropdown_label">Select...</span>
+          <img src="images/icons/chevron-down.svg" alt="chevron-dow" />
+        </button>
+        <div class="dropdown_options_background">
+          <div class="dropdown_options_container">
+            <button class="dropdown_option" reference="sun" value="no">
+              <img src="images/icons/no-sun.svg" alt="No Sun">
+              - No
+            </button>
+            <button class="dropdown_option" reference="sun" value="low">
+              <img src="images/icons/low-sun.svg" alt="Low Sun">
+              - Low
+            </button>
+            <button class="dropdown_option" reference="sun" value="high">
+              <img src="images/icons/low-sun.svg" alt="High Sun">
+              <img src="images/icons/low-sun.svg" alt="High Sun">
+              - High
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="filter_option">
+      <img src="images/illustrations/wateringcan.png" alt="wateringcan" />
+      <label><b>2. </b>How often do you want to <b>water</b> your plant?</label>
+      <div class="dropdown_component">
+        <button id="water" class="dropdown">
+          <span class="dropdown_label">Select...</span>
+          <img src="images/icons/chevron-down.svg" alt="chevron-dow" />
+        </button>
+        <div class="dropdown_options_background">
+          <div class="dropdown_options_container">
+            <button class="dropdown_option" reference="water" value="rarely">
+              <img src="images/icons/1-drop.svg" alt="rarely">
+              - Rarely
+            </button>
+            <button class="dropdown_option" reference="water" value="daily">
+              <img src="images/icons/2-drops.svg" alt="daily">
+              - Daily
+            </button>
+            <button class="dropdown_option" reference="water" value="regularly">
+              <img src="images/icons/3-drops.svg" alt="regularly">
+              - Regularly
+            </button>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+    <div class="filter_option">
+      <img src="images/illustrations/dog.png" alt="dog" />
+      <label><b>3.</b>Do you have pets? Do they <b>chew</b> plants? </label>
+      <div class="dropdown_component">
+        <button id="pets" class="dropdown">
+          <span class="dropdown_label">Select...</span>
+          <img src="images/icons/chevron-down.svg" alt="chevron-down" />
+        </button>
+        <div class="dropdown_options_background">
+          <div class="dropdown_options_container">
+            <button class="dropdown_option" reference="pets" value="false">
+              <img src="images/icons/toxic.svg" alt="No">
+              - No
+            </button>
+            <button class="dropdown_option" reference="pets" value="true">
+              <img src="images/icons/pet.svg" alt="Yes">
+              - Yes
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <section id="plants" result="false">
+    <div id="no_result">
+      <div>
+        <h1>No Results yet...</h1>
+        <p>Use the filters above to find the plant that best fits tour environment :)</p>
+      </div>
+      <div>
+        <img src="images/illustrations/no-results.png" alt="">
+      </div>
+    </div>
+    <div id="results">
+      <img src="images/illustrations/pick.png" alt="">
+      <h1>Our picks for you</h1>
+      <div id="items_container">
+      </div>
+      <a id="back" href="#filter">
+        <img src="images/icons/arrow-up.svg" alt="arrow-down">
+        Back to the top
+      </a>
+    </div>
+  </section>
+</body>
+
+</html>
